@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val Test_TextView: TextView = findViewById(R.id.TextView_MainActivity)
 
 
-            Test_TextView.setText("Wieso?!?")
+            Test_TextView.text = "Wieso?!?"
         }
     }
 }
