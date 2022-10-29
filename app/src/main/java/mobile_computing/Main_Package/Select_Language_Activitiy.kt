@@ -15,9 +15,6 @@ class Select_Language_Activitiy : AppCompatActivity(), View.OnClickListener
     lateinit var English_Checkbox:        CheckBox
     lateinit var Franzoesisch_Checkbox:   CheckBox
     lateinit var Select_Language_Button:  Button
-    private val Language_Key:             String                   = "Language Key"
-    var Primary_Settings                                           = getSharedPreferences("My_Primary_Preferences", 0)
-    var Edit_Language:                    SharedPreferences.Editor = Primary_Settings.edit()
 
 
 
@@ -43,6 +40,9 @@ class Select_Language_Activitiy : AppCompatActivity(), View.OnClickListener
 
     override fun onClick(p0: View?)
     {
+        val Language_Key:             String                   = "Language Key"
+        var Primary_Settings                                           = getSharedPreferences("My_Primary_Preferences", 0)
+        var Edit_Language:                    SharedPreferences.Editor = Primary_Settings.edit()
         val To_Many_Arguments: TextView = findViewById(R.id.textView_To_Many_Arguments)
 
 
