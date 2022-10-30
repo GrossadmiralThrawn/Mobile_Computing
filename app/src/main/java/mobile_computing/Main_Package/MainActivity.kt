@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val Select_Language = Intent(this, Select_Language_Activitiy::class.java)
-        var Primary_Settings = getSharedPreferences("My_Primary_Preferences", 0)
+        val Primary_Settings = getSharedPreferences("My_Primary_Preferences", 0)
         var Edit_Language: SharedPreferences.Editor = Primary_Settings.edit()
         val Language_Key = "Language Key"
 
@@ -22,6 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         if ((Primary_Settings.getString(Language_Key, "") == null) || (Primary_Settings.getString(Language_Key, "") == ""))
         {
+            var Sleeper_1: Sleeper_Class = Sleeper_Class(1000)
+
+
+
+            Sleeper_1.start()
+
+
+
             startActivity(Select_Language)
         }
         else
