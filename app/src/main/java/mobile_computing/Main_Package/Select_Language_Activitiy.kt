@@ -4,14 +4,14 @@ package mobile_computing.Main_Package
 
 
 import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
-
+import java.util.*
 
 
 class Select_Language_Activitiy : AppCompatActivity()
@@ -20,9 +20,8 @@ class Select_Language_Activitiy : AppCompatActivity()
     lateinit var English_Checkbox:        CheckBox
     lateinit var Franzoesisch_Checkbox:   CheckBox
     lateinit var Select_Language_Button:  Button
-
-
-
+    lateinit var Place:                   Locale
+             var Settings_Setter:         Configuration = Configuration()
 
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -40,9 +39,9 @@ class Select_Language_Activitiy : AppCompatActivity()
         Select_Language_Button = findViewById(R.id.Select_Language_Button)
         Select_Language_Button.setOnClickListener(View.OnClickListener()
         {
-            val Language_Key:             String                   = "Language Key"
-            val Primary_Settings                                           = getSharedPreferences("My_Primary_Preferences", 0)
-            val Edit_Language:                    SharedPreferences.Editor = Primary_Settings.edit()
+            val Language_Key:      String                                                   = "Language Key"
+            val Primary_Settings                                                            = getSharedPreferences("My_Primary_Preferences", 0)
+            val Edit_Language:                    SharedPreferences.Editor                  = Primary_Settings.edit()
             val To_Many_Arguments: TextView = findViewById(R.id.textView_To_Many_Arguments)
 
 
@@ -63,6 +62,13 @@ class Select_Language_Activitiy : AppCompatActivity()
                     {
                         Edit_Language.putString(Language_Key, "De")
                         Edit_Language.commit()
+
+
+
+                        Place = Locale("De", "De")
+
+
+                        Settings_Setter.setLocale(Place)
                     }
                     else
                     {
@@ -70,6 +76,12 @@ class Select_Language_Activitiy : AppCompatActivity()
                         {
                             Edit_Language.putString(Language_Key, "En")
                             Edit_Language.commit()
+
+
+                            Place = Locale("En", "En")
+
+
+                            Settings_Setter.setLocale(Place)
                         }
                         else
                         {
@@ -77,6 +89,12 @@ class Select_Language_Activitiy : AppCompatActivity()
                             {
                                 Edit_Language.putString(Language_Key, "Fr")
                                 Edit_Language.commit()
+
+
+                                Place = Locale("Fr", "Fr")
+
+
+                                Settings_Setter.setLocale(Place)
                             }
                             else
                             {
