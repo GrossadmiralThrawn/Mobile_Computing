@@ -69,6 +69,9 @@ class Select_Language_Activitiy : AppCompatActivity()
 
 
                         Settings_Setter.setLocale(Place)
+
+
+                        baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
                     }
                     else
                     {
