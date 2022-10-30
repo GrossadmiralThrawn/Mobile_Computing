@@ -43,28 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
         else
         {
-            val Language:      String = Primary_Settings.getString(Language_Key, "Fehler")!!
-            var Place:         Locale = Locale(Language)
-            var config:        Configuration = Configuration()
             val Test_TextView: TextView = findViewById(R.id.TextView_MainActivity)
-
-
-
-            Locale.setDefault(Place)
-
-
-            Settings_Setter.setLocale(Place)
-
-
-            config.locale = Place
-
-
-
-            baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
-
-
-
-            Test_TextView.text
         }
     }
 }

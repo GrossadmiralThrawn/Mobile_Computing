@@ -95,15 +95,6 @@ class Select_Language_Activitiy : AppCompatActivity()
                             {
                                 Edit_Language.putString(Language_Key, "fr")
                                 Edit_Language.commit()
-
-
-                                Place = Locale("fr", "fr")
-
-
-                                Settings_Setter.setLocale(Place)
-
-
-                                baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
                             }
                             else
                             {
