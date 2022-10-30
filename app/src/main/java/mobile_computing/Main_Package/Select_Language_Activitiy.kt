@@ -60,12 +60,12 @@ class Select_Language_Activitiy : AppCompatActivity()
                 {
                     if (Deutsch_Checkbox.isChecked)
                     {
-                        Edit_Language.putString(Language_Key, "De")
+                        Edit_Language.putString(Language_Key, "de")
                         Edit_Language.commit()
 
 
 
-                        Place = Locale("De", "De")
+                        Place = Locale("de", "de")
 
 
                         Settings_Setter.setLocale(Place)
@@ -77,27 +77,33 @@ class Select_Language_Activitiy : AppCompatActivity()
                     {
                         if (English_Checkbox.isChecked)
                         {
-                            Edit_Language.putString(Language_Key, "En")
+                            Edit_Language.putString(Language_Key, "en")
                             Edit_Language.commit()
 
 
-                            Place = Locale("En", "En")
+                            Place = Locale("en", "en")
 
 
                             Settings_Setter.setLocale(Place)
+
+
+                            baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
                         }
                         else
                         {
                             if (Franzoesisch_Checkbox.isChecked)
                             {
-                                Edit_Language.putString(Language_Key, "Fr")
+                                Edit_Language.putString(Language_Key, "fr")
                                 Edit_Language.commit()
 
 
-                                Place = Locale("Fr", "Fr")
+                                Place = Locale("fr", "fr")
 
 
                                 Settings_Setter.setLocale(Place)
+
+
+                                baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
                             }
                             else
                             {
