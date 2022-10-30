@@ -35,9 +35,6 @@ class MainActivity : AppCompatActivity() {
         else
         {
             val Test_TextView: TextView = findViewById(R.id.TextView_MainActivity)
-
-
-            Test_TextView.text = "Wieso?!?"
         }
     }
 }
