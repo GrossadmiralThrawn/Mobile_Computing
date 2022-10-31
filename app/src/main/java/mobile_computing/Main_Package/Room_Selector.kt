@@ -6,7 +6,7 @@ import android.os.Bundle
 
 class Room_Selector : AppCompatActivity()
 {
-    var Room: String = ""
+    var Room: String = "Funktioniert"
 
 
 

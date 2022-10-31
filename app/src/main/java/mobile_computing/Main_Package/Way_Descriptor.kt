@@ -10,6 +10,11 @@ import android.os.Bundle
 
 
 class Way_Descriptor : AppCompatActivity() {
+    var Room: String = ""
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_way_descriptor)
@@ -17,5 +22,8 @@ class Way_Descriptor : AppCompatActivity() {
 
         var Get_Datas: Bundle? = intent.extras
 
+
+
+        Room = Get_Datas!!.getString("Room_Name").toString()
     }
 }
