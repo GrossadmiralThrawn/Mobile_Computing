@@ -14,26 +14,16 @@ class Room_Selector : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room_selector)
-    }
 
 
-
-
-
-
-
-
-    fun Call_Way_Descriptor_Actibvty()
-    {
         var New_Activity                      = Intent(this, Way_Descriptor::class.java)
-        var Way_Descriptor_TextView: TextView = findViewById(R.id.Test_Textview_Way_Descriptor)
+        //var Way_Descriptor_TextView: TextView = findViewById(R.id.Test_Textview_Way_Descriptor)
 
 
 
         New_Activity.putExtra("Room_Name", Room)
 
 
-
-        Way_Descriptor_TextView.text = Room
+        startActivity(New_Activity)
     }
 }

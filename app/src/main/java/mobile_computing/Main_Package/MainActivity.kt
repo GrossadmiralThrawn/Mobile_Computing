@@ -3,10 +3,9 @@ package mobile_computing.Main_Package
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import java.util.*
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +42,11 @@ class MainActivity : AppCompatActivity() {
         }
         else
         {
-            val Test_TextView: TextView = findViewById(R.id.TextView_MainActivity)
+            val Test_TextView:            TextView = findViewById(R.id.TextView_MainActivity)
+            val Change_To_Room_Selector:  Intent   = Intent(this, Room_Selector::class.java)
+
+
+            startActivity(Change_To_Room_Selector)
         }
     }
 }
