@@ -3,6 +3,7 @@ package mobile_computing.Main_Package
 
 
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
@@ -22,6 +23,7 @@ class Select_Language_Activitiy : AppCompatActivity()
     lateinit var Select_Language_Button:  Button
     lateinit var Place:                   Locale
              var Settings_Setter:         Configuration = Configuration()
+             val Back_To_Main                           = Intent(this, Select_Language_Activitiy::class.java)
 
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -72,6 +74,10 @@ class Select_Language_Activitiy : AppCompatActivity()
 
 
                         baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
+
+
+
+                        startActivity(Back_To_Main)
                     }
                     else
                     {
@@ -88,6 +94,9 @@ class Select_Language_Activitiy : AppCompatActivity()
 
 
                             baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
+
+
+                            startActivity(Back_To_Main)
                         }
                         else
                         {
@@ -95,6 +104,9 @@ class Select_Language_Activitiy : AppCompatActivity()
                             {
                                 Edit_Language.putString(Language_Key, "fr")
                                 Edit_Language.commit()
+
+
+                                startActivity(Back_To_Main)
                             }
                             else
                             {
