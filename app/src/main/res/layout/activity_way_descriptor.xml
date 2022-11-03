@@ -8,10 +8,10 @@
     tools:context=".Way_Descriptor">
 
     <TextView
-        android:id="@+id/Way_Descriptor_TextView"
+        android:id="@+id/Descriptor_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Kommt die App bis hier her?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

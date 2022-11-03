@@ -16,7 +16,7 @@ class Room_Selector : AppCompatActivity()
         setContentView(R.layout.activity_room_selector)
 
 
-        var Way_Descriptor_TextView: TextView = findViewById(R.id.Test_Textview_Way_Descriptor)
+        val Test_2_TextView:          TextView = findViewById(R.id.Descriptor_TextView)
         var New_Activity                      = Intent(this, Way_Descriptor::class.java)
 
 
