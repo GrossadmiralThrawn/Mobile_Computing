@@ -11,7 +11,7 @@
         android:id="@+id/Descriptor_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kommt die App bis hier her?"
+        android:text="Hallo, wie geht's denn so?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
