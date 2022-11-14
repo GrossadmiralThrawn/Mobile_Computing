@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/Mobile_Computing/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Mobile_Computing/app/src/main/res/layout/activity_select_language_activitiy.xml" value="0.132" />
-        <entry key="..\:/Users/Lukas/OneDrive/Desktop/Mobile_Computing/app/src/main/res/layout/activity_room_selector.xml" value="0.1" />
+        <entry key="..\:/Users/Lukas/OneDrive/Desktop/Mobile_Computing/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Lukas/OneDrive/Desktop/Mobile_Computing/app/src/main/res/layout/activity_room_selector.xml" value="0.12" />
         <entry key="..\:/Users/Lukas/OneDrive/Desktop/Mobile_Computing/app/src/main/res/layout/activity_select_language_activitiy.xml" value="0.1" />
         <entry key="..\:/Users/Lukas/OneDrive/Desktop/Mobile_Computing/app/src/main/res/layout/activity_way_descriptor.xml" value="0.1" />
       </map>
@@ -16,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.12" />
+      </ProjectState>
+    </option>
   </component>
 </project>

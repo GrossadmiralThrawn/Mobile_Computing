@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Mobile_Computing</string>
     <string name="Greeting">Welcome en francais</string>
+    <string name="Room_Selector">Choisir une salle</string>
+    <string name="Room">      Chambre</string>
+    <string name="Building">Bâtiment</string>
 </resources>

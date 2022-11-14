@@ -5,6 +5,7 @@ package mobile_computing.Main_Package
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.TextView
 
 
@@ -19,14 +20,14 @@ class Way_Descriptor : AppCompatActivity() {
         setContentView(R.layout.activity_way_descriptor)
 
 
-        var Get_Datas:               Bundle?  = intent.extras
-        //var Descriptor_TextView: TextView = findViewById(R.id.Test_Textview_Way_Descriptor)
+        var Get_Datas:                Bundle?  = intent.extras
+        var Descriptor_TextView:      TextView = findViewById(R.id.Descriptor_TextView)
 
 
 
         Room = Get_Datas!!.getString("Room_Name").toString()
 
 
-        //Descriptor_TextView.text = Room
+        Descriptor_TextView.text = Room
     }
 }

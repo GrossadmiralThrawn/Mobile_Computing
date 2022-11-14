@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Mobile_Computing</string>
-    <string name="Greeting">Keine Sprache festgelegt.</string>
+    <string name="Greeting">No language selected./ Keine Sprache festgelegt./ Pas de langue définie.</string>
+    <string name="Room_Selector">Select a room.</string>
+    <string name="Room">      Room/ Raum/ Chambre</string>
+    <string name="Building">Building/ Gebäude/ Bâtiment</string>
 </resources>
