@@ -10,8 +10,7 @@ import android.widget.TextView
 
 class Room_Selector : AppCompatActivity()
 {
-    var Gebaeude: String                  = ""
-    var Room:     String                  = ""
+    var Room: String                  = ""
     var Out_Of_While_Boolean: Boolean = false
 
 
@@ -26,12 +25,14 @@ class Room_Selector : AppCompatActivity()
         var EditText_Room_Name_Input: EditText = findViewById(R.id.editText_Room_Name)
 
 
+        Room = EditText_Room_Name_Input.text.toString()
+
+
 
         while (Out_Of_While_Boolean == false)
         {
-            Gebaeude = EditText_Room_Name_Input.text.toString()
 
-            if (Gebaeude != "" && Gebaeude != null )
+            if (Room != "" && Room != null )
             {
 
             }
