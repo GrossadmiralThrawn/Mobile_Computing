@@ -32,10 +32,15 @@ class Room_Selector : AppCompatActivity()
 
 
 
-        if (Room != "" || Room != null)
+        if (Room == "" || Room == null)
         {
             TextView_Fehlerbehandlung.visibility = View.VISIBLE
         }
+        else
+        {
+
+        }
+
 
 
 
