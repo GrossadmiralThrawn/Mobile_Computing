@@ -20,7 +20,7 @@ class Room_Selector : AppCompatActivity()
         setContentView(R.layout.activity_room_selector)
 
 
-        val Test_2_TextView:          TextView = findViewById(R.id.textView_Test_2)
+        val Test_2_TextView:          TextView = findViewById(R.id.Descriptor_TextView)
         var New_Activity                       = Intent(this, Way_Descriptor::class.java)
         var EditText_Room_Name_Input: EditText = findViewById(R.id.editText_Room_Name)
 

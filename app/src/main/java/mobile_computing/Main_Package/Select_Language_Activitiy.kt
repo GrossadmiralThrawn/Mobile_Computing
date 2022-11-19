@@ -15,40 +15,44 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 
-class Select_Language_Activitiy : AppCompatActivity()
-{
-    lateinit var Deutsch_Checkbox:        CheckBox
-    lateinit var English_Checkbox:        CheckBox
-    lateinit var Franzoesisch_Checkbox:   CheckBox
-    lateinit var Select_Language_Button:  Button
-    lateinit var Place:                   Locale
-             var Settings_Setter:         Configuration = Configuration()
-             val Back_To_Main                           = Intent(this, Select_Language_Activitiy::class.java)
 
 
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+class Select_Language_Activitiy : AppCompatActivity() {
+    lateinit var Deutsch_Checkbox: CheckBox
+    lateinit var English_Checkbox: CheckBox
+    lateinit var Franzoesisch_Checkbox: CheckBox
+    lateinit var Select_Language_Button: Button
+    lateinit var Place: Locale
+
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_language_activitiy)
 
 
 
-        Deutsch_Checkbox      = findViewById(R.id.checkBox_Deutsch)
-        English_Checkbox      = findViewById(R.id.checkBox_Englisch)
+        Deutsch_Checkbox = findViewById(R.id.checkBox_Deutsch)
+        English_Checkbox = findViewById(R.id.checkBox_Englisch)
         Franzoesisch_Checkbox = findViewById(R.id.checkBox_Franzoesisch)
-
-
         Select_Language_Button = findViewById(R.id.Select_Language_Button)
+        val Forward_To_Room_Selector = Intent(this, Room_Selector::class.java)
+        var Settings_Setter: Configuration = Configuration()
+
+
+
+
         Select_Language_Button.setOnClickListener(View.OnClickListener()
         {
-            val Language_Key:      String                                                   = "Language Key"
-            val Primary_Settings                                                            = getSharedPreferences("My_Primary_Preferences", 0)
-            val Edit_Language:                    SharedPreferences.Editor                  = Primary_Settings.edit()
+            val Language_Key: String = "Language Key"
+            val Primary_Settings = getSharedPreferences("My_Primary_Preferences", 0)
+            val Edit_Language: SharedPreferences.Editor = Primary_Settings.edit()
             val To_Many_Arguments: TextView = findViewById(R.id.textView_To_Many_Arguments)
 
 
 
-            if (Deutsch_Checkbox.isChecked &&(English_Checkbox.isChecked || Franzoesisch_Checkbox.isChecked))
+            if (Deutsch_Checkbox.isChecked && (English_Checkbox.isChecked || Franzoesisch_Checkbox.isChecked))
             {
                 To_Many_Arguments.visibility = View.VISIBLE
             }
@@ -60,8 +64,7 @@ class Select_Language_Activitiy : AppCompatActivity()
                 }
                 else
                 {
-                    if (Deutsch_Checkbox.isChecked)
-                    {
+                    if (Deutsch_Checkbox.isChecked) {
                         Edit_Language.putString(Language_Key, "de")
                         Edit_Language.commit()
 
@@ -73,11 +76,8 @@ class Select_Language_Activitiy : AppCompatActivity()
                         Settings_Setter.setLocale(Place)
 
 
-                        baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
 
-
-
-                        startActivity(Back_To_Main)
+                        startActivity(Forward_To_Room_Selector)
                     }
                     else
                     {
@@ -93,10 +93,8 @@ class Select_Language_Activitiy : AppCompatActivity()
                             Settings_Setter.setLocale(Place)
 
 
-                            baseContext.getResources().updateConfiguration(Settings_Setter, baseContext.getResources().displayMetrics)
 
-
-                            startActivity(Back_To_Main)
+                            startActivity(Forward_To_Room_Selector)
                         }
                         else
                         {
@@ -106,7 +104,7 @@ class Select_Language_Activitiy : AppCompatActivity()
                                 Edit_Language.commit()
 
 
-                                startActivity(Back_To_Main)
+                                startActivity(Forward_To_Room_Selector)
                             }
                             else
                             {
