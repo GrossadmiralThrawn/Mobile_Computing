@@ -4,5 +4,5 @@
     <string name="Room_Selector">Wählen Sie einen Raum aus</string>
     <string name="Room">      Raum</string>
     <string name="Building">Gebäude</string>
-
+    <string name="Empty_Input">Geben Sie einen Raum ein.</string>
 </resources>

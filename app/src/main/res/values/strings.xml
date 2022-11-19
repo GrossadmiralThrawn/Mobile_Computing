@@ -4,4 +4,5 @@
     <string name="Room_Selector">Select a room.</string>
     <string name="Room">      Room/ Raum/ Chambre</string>
     <string name="Building">Building/ Gebäude/ Bâtiment</string>
+    <string name="Empty_Input">Enter a room./ Geben Sie einen Raum ein./ Saisissez une salle.</string>
 </resources>

@@ -4,4 +4,5 @@
     <string name="Room_Selector">Select a room</string>
     <string name="Room">      Room</string>
     <string name="Building">Buildingt</string>
+    <string name="Empty_Input">Put in a room.</string>
 </resources>

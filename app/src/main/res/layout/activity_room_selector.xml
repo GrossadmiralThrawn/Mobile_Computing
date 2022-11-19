@@ -7,7 +7,7 @@
     tools:context=".Room_Selector">
 
     <TextView
-        android:id="@+id/textView_Test_2"
+        android:id="@+id/textView_Select_Room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Room_Selector"
@@ -41,5 +41,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:id="@+id/textView_False_Input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Empty_Input"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
