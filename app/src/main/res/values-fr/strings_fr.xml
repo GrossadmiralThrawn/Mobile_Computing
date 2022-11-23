@@ -5,4 +5,5 @@
     <string name="Room">      Chambre</string>
     <string name="Building">Bâtiment</string>
     <string name="Empty_Input">Saisissez une salle.</string>
+    <string name="Room_Input_Hint">Veuillez saisir l\'espace sans espaces ni symboles qui ne correspondent pas au schéma classique de dénomination.</string>
 </resources>

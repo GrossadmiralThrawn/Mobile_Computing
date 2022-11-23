@@ -6,5 +6,4 @@
     <string name="Building">Buildingt</string>
     <string name="Empty_Input">Put in a room.</string>
     <string name="Room_Input_Hint">Please enter the Room without spaces or symbols which are unnecessary for the room.</string>
-
 </resources>

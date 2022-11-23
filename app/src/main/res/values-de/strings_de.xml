@@ -5,5 +5,5 @@
     <string name="Room">      Raum</string>
     <string name="Building">Gebäude</string>
     <string name="Empty_Input">Geben Sie einen Raum ein.</string>
-    <string name="Room_Input_Hint">Bitte geben Sie den Raum ohne Leerzeichen oder Symbole ein, welche nicht dem klassischen Namensschema entsprechen.</string>
+    <string name="Room_Input_Hint">Bitte geben Sie den Raum ohne Symbole ein, welche nicht dem klassischen Namensschema entsprechen.</string>
 </resources>
