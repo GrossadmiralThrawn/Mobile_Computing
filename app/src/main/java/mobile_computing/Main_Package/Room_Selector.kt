@@ -20,9 +20,9 @@ class Room_Selector : AppCompatActivity()
         setContentView(R.layout.activity_room_selector)
 
 
-        val Select_Room_TextView:      TextView = findViewById(R.id.textView_Select_Room)
+        val Select_Room_TextView:      TextView = findViewById(R.id.editText_Room_Name)
         var Way_Descriptor_Activity                        = Intent(this, Way_Descriptor::class.java)
-        var EditText_Room_Name_Input:  EditText = findViewById(R.id.editText_Room_Name)
+        var EditText_Room_Name_Input:  EditText = findViewById<EditText>(R.id.editText_Room_Name)
         var TextView_Fehlerbehandlung: TextView = findViewById(R.id.textView_False_Input)
         var Test_Array                          = arrayOf("TaC", "G/-1/19", "G/-1/20", "G/-1/21")
 
@@ -31,12 +31,11 @@ class Room_Selector : AppCompatActivity()
         TextView_Fehlerbehandlung.visibility = View.INVISIBLE
 
 
+        Room = "G/-1/19"
 
-        if (Room == "" || Room == null)
-        {
-            TextView_Fehlerbehandlung.visibility = View.VISIBLE
-        }
-        else
+
+
+        if (Room != "" || Room != null)
         {
             for (element in Test_Array)
             {
@@ -52,6 +51,10 @@ class Room_Selector : AppCompatActivity()
                     continue
                 }
             }
+        }
+        else
+        {
+            TextView_Fehlerbehandlung.visibility = View.VISIBLE
         }
     }
 }

@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         if ((Primary_Settings.getString(Language_Key, "") == null) || (Primary_Settings.getString(
                 Language_Key,
                 ""
-            ) == "")
-        ) {
+            ) == ""))
+        {
             var Select_Language = Intent(this, Select_Language_Activitiy::class.java)
             val Test_TextView: TextView = findViewById(R.id.TextView1_MainActivity)
             var Sleeper_1: Sleeper_Class = Sleeper_Class(1000)
