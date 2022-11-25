@@ -20,13 +20,13 @@ class Way_Descriptor : AppCompatActivity() {
 
 
         var Get_Datas:               Bundle?  = intent.extras
-        //var Descriptor_TextView: TextView = findViewById(R.id.Test_Textview_Way_Descriptor)
+        var Descriptor_TextView: TextView = findViewById(R.id.Descriptor_TextView)
 
 
 
         Room = Get_Datas!!.getString("Room_Name").toString()
 
 
-        //Descriptor_TextView.text = Room
+        Descriptor_TextView.text = Room
     }
 }
