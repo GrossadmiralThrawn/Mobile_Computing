@@ -66,6 +66,9 @@ class MainActivity : AppCompatActivity() {
                 Rotation += 1
 
 
+                Welcome_Text_View.textSize += 0.138f
+
+
                 New_Sleeper.start()
             }
             startActivity(Change_To_Room_Selector)
