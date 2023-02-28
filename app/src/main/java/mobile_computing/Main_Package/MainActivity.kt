@@ -64,6 +64,9 @@ class MainActivity : AppCompatActivity() {
 
 
                 Rotation += 1
+
+
+                New_Sleeper.start()
             }
             startActivity(Change_To_Room_Selector)
         }
