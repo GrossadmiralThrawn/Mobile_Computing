@@ -29,6 +29,10 @@ class Room_Selector : AppCompatActivity() {
         var Test_Array = arrayOf("TaC", "G/-1/19", "G/-1/20", "G/-1/21")
         val Test_Array_Last: String = Test_Array.last()
         var Select_Button: Button = findViewById(R.id.Button_Room_Input)
+        var i = Test_Array.size shr 1
+        var Test_Integer = 0
+        val Test_Array_Size = Test_Array.size - 1
+
 
 
         TextView_Fehlerbehandlung.visibility = View.INVISIBLE
@@ -43,27 +47,45 @@ class Room_Selector : AppCompatActivity() {
 
             if (Room != "" || Room != null)
             {
-                for (element in Test_Array)
+                while (Test_Array[i] != Room)
                 {
-                    if (Room == element)
+                    if (Room.compareTo(Test_Array[i]) < 0)
                     {
-                        Way_Descriptor_Activity.putExtra("Room_Name", Room)
-
-
-                        startActivity(Way_Descriptor_Activity)
+                        i = (i - 1) + ((Test_Array_Size) - i shr 1)
                     }
                     else
                     {
-                        if (element == Test_Array_Last)
+                        i = i + i shr 1
+
+
+
+                        if (i > Test_Array.size || i < 0)
                         {
                             TextView_Fehlerbehandlung.text = "Room not found"
                         }
                         else
                         {
-                            continue
+                            if (((i + 1)) == Test_Integer || ((i - 1) == Test_Integer))
+                            {
+                                TextView_Fehlerbehandlung.text = "Room not found"
+                            }
+                            else
+                            {
+                                Test_Integer = i
+
+
+
+                                continue
+                            }
                         }
                     }
                 }
+
+
+                Way_Descriptor_Activity.putExtra("Room_Name", Room)
+
+
+                startActivity(Way_Descriptor_Activity)
             } else {
                 TextView_Fehlerbehandlung.visibility = View.VISIBLE
             }
