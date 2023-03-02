@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
 
             while (Rotation < 360)
             {
-                val New_Sleeper: Sleeper_Class = Sleeper_Class(50)
+                val Schlaefer_Start = Schlaefer_Start(50)
+
 
 
                 Welcome_Text_View.rotation = Rotation
@@ -69,8 +70,11 @@ class MainActivity : AppCompatActivity() {
                 Welcome_Text_View.textSize += 0.138f
 
 
-                New_Sleeper.start()
+                Schlaefer_Start.Start()
             }
+
+
+
             startActivity(Change_To_Room_Selector)
         }
     }
